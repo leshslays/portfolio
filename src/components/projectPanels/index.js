@@ -1,11 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import FormLabel from '@material-ui/core/FormLabel';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import Radio from '@material-ui/core/Radio';
 import Paper from '@material-ui/core/Paper';
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -21,47 +18,22 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SpacingGrid() {
-    const [spacing, setSpacing] = React.useState(2);
     const classes = useStyles();
-
-    const handleChange = (event) => {
-        setSpacing(Number(event.target.value));
-    };
 
     return (
         <Grid container className={classes.root} spacing={2}>
-            <Grid item xs={12}>
-                <Grid container justify="center" spacing={spacing}>
-                    {[0, 1, 2].map((value) => (
-                        <Grid key={value} item>
-                            <Paper className={classes.paper} />
-                        </Grid>
-                    ))}
-                </Grid>
-            </Grid>
-            <Grid item xs={12}>
+            <Grid item sm={4} xs={12}>
                 <Paper className={classes.control}>
-                    <Grid container>
-                        <Grid item>
-                            <FormLabel>spacing</FormLabel>
-                            <RadioGroup
-                                name="spacing"
-                                aria-label="spacing"
-                                value={spacing.toString()}
-                                onChange={handleChange}
-                                row
-                            >
-                                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
-                                    <FormControlLabel
-                                        key={value}
-                                        value={value.toString()}
-                                        control={<Radio />}
-                                        label={value.toString()}
-                                    />
-                                ))}
-                            </RadioGroup>
-                        </Grid>
-                    </Grid>
+                    <div className="img-with-text">
+                        <ul>
+                            <Link to="/about">
+                                <img src="https://gbksoft.com/blog/wp-content/uploads/2019/07/trading-984x555.png" alt="Algorithmic Trading Pic"/>
+                                <p>
+                                    <a>Algorithmic Trading</a>
+                                </p>
+                            </Link>
+                        </ul>
+                    </div>
                 </Paper>
             </Grid>
         </Grid>

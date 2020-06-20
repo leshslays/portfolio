@@ -20,9 +20,9 @@ import MailIcon from '@material-ui/icons/Mail';
 import InfoIcon from '@material-ui/icons/Info';
 import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
+import Projects from '../projects/index';
 import Home from '../home/index';
 import About from '../about/index';
-import
 
 const drawerWidth = 240;
 
@@ -164,8 +164,9 @@ export default function PersistentDrawerLeft() {
                 <div className={classes.drawerHeader} />
                 <Router>
                     <Switch>
-                        <Route exact path="/" component={Home}/>
+                        {/*<Route exact path="/" component={Home}/>*/}
                         <Route exact path="/about" component={About}/>
+                        <Route exact path="/" component={Projects} />
                     </Switch>
                 </Router>
             </main>
