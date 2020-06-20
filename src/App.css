@@ -1,0 +1,16 @@
+.img-with-text {
+    text-align: center;
+    width: 400px;
+    text-decoration: none;
+}
+
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    height: 275px;
+}
+
+a {
+    text-decoration: none;
+}
