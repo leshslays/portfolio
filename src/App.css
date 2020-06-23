@@ -1,16 +1,13 @@
-.img-with-text {
+.project-header {
     text-align: center;
-    width: 400px;
-    text-decoration: none;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: x-large;
+    color: white;
 }
 
-.img-with-text img {
-    display: block;
-    margin: 0 auto;
-    width: 400px;
-    height: 275px;
-}
-
-a {
-    text-decoration: none;
+.project-main-text {
+    text-align: center;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: large;
+    color:white;
 }

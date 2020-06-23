@@ -21,8 +21,9 @@ import InfoIcon from '@material-ui/icons/Info';
 import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Projects from '../projects/index';
-import Home from '../home/index';
 import About from '../about/index';
+import Avatar from '../components/avatar/index';
+import Algotrade from "../projects/algotrade";
 
 const drawerWidth = 240;
 
@@ -53,9 +54,12 @@ const useStyles = makeStyles((theme) => ({
     drawer: {
         width: drawerWidth,
         flexShrink: 0,
+
     },
     drawerPaper: {
         width: drawerWidth,
+        backgroundColor: "#547cb6",
+        color: "white"
     },
     drawerHeader: {
         display: 'flex',
@@ -105,7 +109,7 @@ export default function PersistentDrawerLeft() {
                     [classes.appBarShift]: open,
                 })}
             >
-                <Toolbar>
+                <Toolbar style={{backgroundColor:"#547cb6"}}>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -115,9 +119,10 @@ export default function PersistentDrawerLeft() {
                     >
                         <MenuIcon />
                     </IconButton>
+                    <Avatar/>
                     <Typography variant="h6" noWrap>
-                        Leshlye Rivera
-                    </Typography>
+                    Leshlye Rivera
+                </Typography>
                 </Toolbar>
             </AppBar>
             <Drawer
@@ -130,27 +135,21 @@ export default function PersistentDrawerLeft() {
                 }}
             >
                 <div className={classes.drawerHeader}>
-                    <IconButton onClick={handleDrawerClose}>
+                    <IconButton style={{color:"white"}} onClick={handleDrawerClose}>
                         {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                     </IconButton>
                 </div>
-                <Divider />
+                <Divider/>
                 <List>
                     <ListItem>
-                        <Button href='/about' style={{ width: '100%', textAlign: 'left' }}><InfoIcon /> &nbsp; &nbsp; Home</Button>
+                        <Button href='/about' style={{ width: '100%', textAlign: 'left', color: "white"}}><InfoIcon style={{color:"white"}}/> &nbsp; &nbsp; Resume</Button>
                     </ListItem>
-                    {/*{['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (*/}
-                    {/*    <ListItem button key={text}>*/}
-                    {/*        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>*/}
-                    {/*        <ListItemText primary={text} />*/}
-                    {/*    </ListItem>*/}
-                    {/*))}*/}
                 </List>
                 <Divider />
                 <List>
-                    {['Projects', 'About', 'Contact'].map((text, index) => (
+                    {['Home', 'About', 'Contact'].map((text, index) => (
                         <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                            <ListItemIcon style={{color:"white"}}>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
                     ))}
@@ -164,30 +163,12 @@ export default function PersistentDrawerLeft() {
                 <div className={classes.drawerHeader} />
                 <Router>
                     <Switch>
-                        {/*<Route exact path="/" component={Home}/>*/}
                         <Route exact path="/about" component={About}/>
                         <Route exact path="/" component={Projects} />
+                        <Route exact path="/projects/algotrade" component={Algotrade} />
                     </Switch>
                 </Router>
             </main>
         </div>
     );
 }
-
-// import React, { Component } from 'react';
-// import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
-
-// import Nav from '../components/Toolbar/Toolbar';
-//
-//
-// export default class Main extends Component{
-//     render(){
-//         return(
-//             <>
-//                 <Nav/>
-
-//             </>
-//         )
-//     }
-//
-// }
