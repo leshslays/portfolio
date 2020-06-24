@@ -11,37 +11,37 @@ const algoTileData = [
         img: algotrade1,
         title: 'Algorithmic Trading',
         author: 'author',
-        cols: 2
+        cols: 3
     },
     {
         img: algotrade2,
         title: 'Algorithmic Trading',
         author: 'author',
-        cols: 2
+        cols: 3
     },
     {
         img: algotrade3,
         title: 'Algorithmic Trading',
         author: 'author',
-        cols: 2
+        cols: 6
     },
     {
         img: algotrade4,
         title: 'Algorithmic Trading',
         author: 'author',
-        cols: 2
+        cols: 3
     },
     {
         img: algotrade5,
         title: 'Algorithmic Trading',
         author: 'author',
-        cols: 2
+        cols: 3
     },
     {
         img: algotrade6,
         title: 'Algorithmic Trading',
         author: 'author',
-        cols: 2
+        cols: 6
     }
 
 ];

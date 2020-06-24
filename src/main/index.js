@@ -9,14 +9,13 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
+import SendIcon from '@material-ui/icons/Send';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import SquareFootIcon from '@material-ui/icons/SquareFoot';
+import FindInPageIcon from '@material-ui/icons/FindInPage';
 import InfoIcon from '@material-ui/icons/Info';
 import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
@@ -24,6 +23,10 @@ import Projects from '../projects/index';
 import About from '../about/index';
 import Avatar from '../components/avatar/index';
 import Algotrade from "../projects/algotrade";
+import Bananas from "../projects/bananas";
+import Ninja from "../projects/ninjareport"
+import '../App.css';
+import Contact from "../components/contact/index"
 
 const drawerWidth = 240;
 
@@ -142,17 +145,21 @@ export default function PersistentDrawerLeft() {
                 <Divider/>
                 <List>
                     <ListItem>
-                        <Button href='/about' style={{ width: '100%', textAlign: 'left', color: "white"}}><InfoIcon style={{color:"white"}}/> &nbsp; &nbsp; Resume</Button>
+                        <Button href='/about' style={{ width: '100%', textAlign: 'left', color: "white"}}><FindInPageIcon style={{color:"white"}}/> &nbsp; &nbsp; &nbsp; &nbsp; Resume</Button>
                     </ListItem>
                 </List>
                 <Divider />
                 <List>
-                    {['Home', 'About', 'Contact'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon style={{color:"white"}}>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                            <ListItemText primary={text} />
+                        <ListItem>
+                            <Button href='/' style={{ width: '100%', textAlign: 'left', color: "white"}}><SquareFootIcon style={{color:"white"}}/> &nbsp; &nbsp; Projects</Button>
                         </ListItem>
-                    ))}
+                        <ListItem>
+                             <Button href='/' style={{ width: '100%', textAlign: 'left', color: "white"}}><InfoIcon style={{color:"white"}}/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;About</Button>
+                        </ListItem>
+                        <ListItem>
+                            <Button href='contact' style={{ width: '100%', textAlign: 'left', color: "white"}}><SendIcon style={{color:"white"}}/> &nbsp; &nbsp; &nbsp; Contact</Button>
+                        </ListItem>
+
                 </List>
             </Drawer>
             <main
@@ -166,6 +173,9 @@ export default function PersistentDrawerLeft() {
                         <Route exact path="/about" component={About}/>
                         <Route exact path="/" component={Projects} />
                         <Route exact path="/projects/algotrade" component={Algotrade} />
+                        <Route exact path="/projects/bananas" component={Bananas} />
+                        <Route exact path="/projects/ninjareport" component={Ninja} />
+                        <Route exact path="/contact" component={Contact} />
                     </Switch>
                 </Router>
             </main>

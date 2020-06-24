@@ -2,12 +2,17 @@
     text-align: center;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: x-large;
-    color: white;
+    color: aliceblue;
+    background-color: gray;
 }
 
 .project-main-text {
     text-align: center;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: large;
-    color:white;
+    color:aliceblue;
+}
+
+.sidebar-names {
+    color: white;
 }
