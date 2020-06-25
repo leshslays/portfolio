@@ -10,12 +10,12 @@ const useStyles = makeStyles({
         textAlign:'center',
         width: 275,
         height:60,
-        backgroundColor:"gray"
+        backgroundColor:"aliceblue"
     },
     title: {
         fontSize: 24,
         alignItems:"center",
-        color:"aliceblue"
+        color:"#547cb6"
     }
 });
 

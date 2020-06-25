@@ -8,19 +8,19 @@ const tileData = [
         img: tradePic,
         title: 'Algorithmic Trading',
         details: 'Live Trading in NYSE',
-           reference:'../projects/algotrade'
+           reference:'/algotrade'
        },
        {
         img: javaP,
         title: 'Bananas Potato Project',
         details: 'Bananas Indeed',
-           reference:'../projects/bananas'
+           reference:'/bananas'
        },
         {
          img: ninja,
          title:'The Ninja Report',
          details:'sssshhhhhh',
-            reference: '../projects/ninjareport'
+            reference: '/ninjareport'
         }
 ];
 

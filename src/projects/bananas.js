@@ -4,11 +4,13 @@ import Showcase from '../components/showcase/project2/index';
 import Title from '../components/titles/bananas';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Link from '@material-ui/core/Link';
+import Breadcrum from "../components/breadcrumb/bananas";
 
 export default class Bananas extends Component{
     render() {
         return(
             <>
+                <Breadcrum/>
                 <center><Title/></center>
                 &nbsp;
                 <Showcase/>

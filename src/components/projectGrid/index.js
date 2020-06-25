@@ -8,6 +8,7 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 import tileData from '../tileData/tileData';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -42,9 +43,11 @@ export default function TitlebarGridList() {
                             title={tile.title}
                             subtitle={<span>Desc: {tile.details}</span>}
                             actionIcon={
-                                <IconButton href ={tile.reference} aria-label={`info about ${tile.title}`} className={classes.icon}>
+                                <Link href ={tile.reference}>
+                                <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
                                     <InfoIcon />
                                 </IconButton>
+                                </Link>
                             }
                         />
                     </GridListTile>

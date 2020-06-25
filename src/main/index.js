@@ -16,17 +16,16 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import SquareFootIcon from '@material-ui/icons/SquareFoot';
 import FindInPageIcon from '@material-ui/icons/FindInPage';
-import InfoIcon from '@material-ui/icons/Info';
 import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Projects from '../projects/index';
-import About from '../about/index';
 import Avatar from '../components/avatar/index';
 import Algotrade from "../projects/algotrade";
 import Bananas from "../projects/bananas";
-import Ninja from "../projects/ninjareport"
+import Ninja from "../projects/ninjareport";
 import '../App.css';
-import Contact from "../components/contact/index"
+import Contact from "../components/contact/index";
+import Resume from '../components/resume/index';
 
 const drawerWidth = 240;
 
@@ -145,16 +144,13 @@ export default function PersistentDrawerLeft() {
                 <Divider/>
                 <List>
                     <ListItem>
-                        <Button href='/about' style={{ width: '100%', textAlign: 'left', color: "white"}}><FindInPageIcon style={{color:"white"}}/> &nbsp; &nbsp; &nbsp; &nbsp; Resume</Button>
+                        <Button href='/resume' style={{ width: '100%', textAlign: 'left', color: "white"}}><FindInPageIcon style={{color:"white"}}/> &nbsp; &nbsp; &nbsp; &nbsp; Resume</Button>
                     </ListItem>
                 </List>
                 <Divider />
                 <List>
                         <ListItem>
                             <Button href='/' style={{ width: '100%', textAlign: 'left', color: "white"}}><SquareFootIcon style={{color:"white"}}/> &nbsp; &nbsp; Projects</Button>
-                        </ListItem>
-                        <ListItem>
-                             <Button href='/' style={{ width: '100%', textAlign: 'left', color: "white"}}><InfoIcon style={{color:"white"}}/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;About</Button>
                         </ListItem>
                         <ListItem>
                             <Button href='contact' style={{ width: '100%', textAlign: 'left', color: "white"}}><SendIcon style={{color:"white"}}/> &nbsp; &nbsp; &nbsp; Contact</Button>
@@ -170,12 +166,12 @@ export default function PersistentDrawerLeft() {
                 <div className={classes.drawerHeader} />
                 <Router>
                     <Switch>
-                        <Route exact path="/about" component={About}/>
                         <Route exact path="/" component={Projects} />
-                        <Route exact path="/projects/algotrade" component={Algotrade} />
-                        <Route exact path="/projects/bananas" component={Bananas} />
-                        <Route exact path="/projects/ninjareport" component={Ninja} />
+                        <Route exact path="/algotrade" component={Algotrade} />
+                        <Route exact path="/bananas" component={Bananas} />
+                        <Route exact path="/ninjareport" component={Ninja} />
                         <Route exact path="/contact" component={Contact} />
+                        <Route exact path="/resume" component={Resume} />
                     </Switch>
                 </Router>
             </main>

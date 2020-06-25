@@ -10,12 +10,12 @@ const useStyles = makeStyles({
         textAlign:'center',
         width: 275,
         height:60,
-        backgroundColor:"gray"
+        backgroundColor:"aliceblue"
     },
     title: {
         fontSize: 24,
         alignItems:"center",
-        color:"aliceblue"
+        color:"#547cb6"
     }
 });
 
@@ -25,7 +25,7 @@ export default function SimpleCard() {
         <Card className={classes.root}>
             <CardContent>
                 <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    &#60;contact page/>
+                    Contact Page
                 </Typography>
             </CardContent>
         </Card>
