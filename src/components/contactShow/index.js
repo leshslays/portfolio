@@ -8,7 +8,7 @@ import TheCard from '../contactShow/card';
 const useStyles = makeStyles((theme) => ({
     root: {
         height: 180,
-        textAlign:'center'
+        textAlign:'center',
     },
     container: {
         display: 'flex',
@@ -38,17 +38,8 @@ export default function SimpleGrow() {
                 label="Show contact information" style={{color:"aliceblue"}}
             />
             <div className={classes.container}>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </p>
                 <Grow in={checked}>
-                    <center><TheCard /></center>
+                    <center style={{margin:'auto'}}><TheCard /></center>
                 </Grow>
             </div>
         </div>
