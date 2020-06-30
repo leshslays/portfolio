@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Image from 'material-ui-image';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import bananasTileData from '../project2/bananasTileData';
+import emailTileData from './emailTileData';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,7 +25,7 @@ export default function ImageGridList() {
     return (
         <div className={classes.root}>
             <GridList cellHeight={200} className={classes.gridList} cols={6}>
-                {bananasTileData.map((tile) => (
+                {emailTileData.map((tile) => (
                     <GridListTile key={tile.img} cols={tile.cols || 1}>
                         <Image src={tile.img} alt={tile.title} />
                     </GridListTile>

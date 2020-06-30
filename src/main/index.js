@@ -21,7 +21,7 @@ import Button from '@material-ui/core/Button';
 import Projects from '../projects/index';
 import Avatar from '../components/avatar/index';
 import Algotrade from "../projects/algotrade";
-import Bananas from "../projects/bananas";
+import Emailapp from "../projects/emailapp";
 import Ninja from "../projects/ninjareport";
 import '../App.css';
 import Contact from "../components/contact/index";
@@ -168,7 +168,7 @@ export default function PersistentDrawerLeft() {
                     <Switch>
                         <Route exact path="/" component={Projects} />
                         <Route exact path="/algotrade" component={Algotrade} />
-                        <Route exact path="/bananas" component={Bananas} />
+                        <Route exact path="/emailapp" component={Emailapp} />
                         <Route exact path="/ninjareport" component={Ninja} />
                         <Route exact path="/contact" component={Contact} />
                         <Route exact path="/resume" component={Resume} />

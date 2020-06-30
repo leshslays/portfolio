@@ -25,7 +25,7 @@ export default function SimpleCard() {
         <Card className={classes.root}>
             <CardContent>
                 <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    &#60;bananas/>
+                    &#60;email app/>
                 </Typography>
             </CardContent>
         </Card>

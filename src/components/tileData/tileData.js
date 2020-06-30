@@ -1,6 +1,6 @@
 import React from 'react';
 import tradePic from '../assets/tradepic.jpg';
-import javaP from '../assets/javaPic.jpg';
+import emailP from '../assets/emailthumbnail.png';
 import ninja from '../assets/ninja.jpg';
 
 const tileData = [
@@ -11,10 +11,10 @@ const tileData = [
            reference:'/algotrade'
        },
        {
-        img: javaP,
-        title: 'Bananas Potato Project',
-        details: 'Bananas Indeed',
-           reference:'/bananas'
+        img: emailP,
+        title: 'Email App',
+        details: 'Java application that generates an email and password for a company employee based on credentials, department and company name.',
+           reference:'/emailapp'
        },
         {
          img: ninja,

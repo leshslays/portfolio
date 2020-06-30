@@ -34,7 +34,7 @@ export default function CustomizedBreadcrumbs() {
                 />
             </Link>
             <Link href ='/bananas'>
-                <StyledBreadcrumb component="a" label="Bananas Potato Project"/>
+                <StyledBreadcrumb component="a" label="Email App"/>
             </Link>
         </Breadcrumbs>
     );

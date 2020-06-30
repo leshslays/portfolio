@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Showcase from '../components/showcase/project2/index';
-import Title from '../components/titles/bananas';
+import Title from '../components/titles/emailapp';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Link from '@material-ui/core/Link';
-import Breadcrum from "../components/breadcrumb/bananas";
+import Breadcrum from "../components/breadcrumb/emailapp";
 
-export default class Bananas extends Component{
+export default class Emailapp extends Component{
     render() {
         return(
             <>
@@ -15,9 +15,9 @@ export default class Bananas extends Component{
                 &nbsp;
                 <Showcase/>
                 <p className="project-main-text">
-                    This is the most bananas of all bananas projects!!!
+                    Java application that generates an email and password <br/> for a company employee based on credentials, department and company name.
                 </p>
-                <Link href={"https://github.com/leshslays/portfolio"} target="_blank">
+                <Link href={"https://github.com/leshslays/emailapp"} target="_blank">
                     <GitHubIcon style={{fontSize:40, color:"#547cb6"}}/>
                 </Link>
             </>
